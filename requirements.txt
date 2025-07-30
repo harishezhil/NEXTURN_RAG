@@ -7,14 +7,11 @@ openpyxl
 pandas
 langchain
 langchain-groq
-langchain-openai
 langchain_community
 requests
 scikit-learn
 rouge-score
 python-dotenv
-
-
 openai
 tiktoken
 
