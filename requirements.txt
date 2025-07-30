@@ -5,12 +5,12 @@ nltk
 PyMuPDF
 openpyxl
 pandas
-python-dotenv
-requests
 langchain
-faiss-cpu
 requests
 scikit-learn
 rouge-score
 python-dotenv
+
+openai
+tiktoken
 
