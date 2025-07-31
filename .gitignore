@@ -1,1 +1,11 @@
 .env
+
+```
+# Python compiled files
+__pycache__/
+*.pyc
+
+# Streamlit related files/directories
+.streamlit/
+```
+Save the `.gitignore` file.
