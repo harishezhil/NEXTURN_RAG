@@ -9,3 +9,4 @@ rouge-score
 python-dotenv
 requests
 langchain
+langchain-community
