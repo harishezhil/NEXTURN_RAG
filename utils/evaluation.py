@@ -70,7 +70,5 @@ def evaluate_predictions(ground_truth: dict, predictions: dict):
         "ROUGE-L": round(np.mean(rougel_list), 4),
         "Cosine Similarity": round(np.mean(cosine_list), 4),
         "F1_Score": round(np.mean(token_f1_list), 4),
-        "Accuracy": round(accuracy, 4),
-        # "Strict Accuracy": round(strict_accuracy, 4),
-        # "Strict F1": round(strict_f1, 4)
+        "Accuracy": round(accuracy, 4)
     }

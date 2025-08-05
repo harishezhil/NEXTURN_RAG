@@ -12,13 +12,18 @@ def load_files(files):
         filename = file.name
 
         if filename.endswith(".pdf"):
-            pdf_stream = BytesIO(file.read())
-            doc = fitz.open(stream=pdf_stream, filetype="pdf")
-            text = "\n".join([page.get_text() for page in doc])
+            file_bytes = file.read() 
+            try:
+                pdf_stream = BytesIO(file_bytes)
+                doc = fitz.open(stream=pdf_stream, filetype="pdf")
+                text = "\n".join([page.get_text() for page in doc])
+            except Exception as e:
+                text = f"[Error reading PDF: {str(e)}]"
             all_texts.append({
                 "filename": filename,
                 "content": text
             })
+
 
         elif filename.endswith(".txt"):
             content = file.read().decode()
