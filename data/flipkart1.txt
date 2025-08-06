@@ -1,0 +1,49 @@
+## Flipkart: A Journey from Online Bookseller to E-commerce Giant
+Flipkart, an Indian e-commerce company, was founded in **October 2007** in Bangalore by **Sachin Bansal** and **Binny Bansal**, both IIT Delhi alumni and former Amazon employees. Starting from a two-bedroom apartment with an initial investment of INR 2 Lakh from each family, Flipkart has grown into a dominant force in the Indian retail landscape.
+### 2007–2010: The Start-up Phase
+Initially, Flipkart focused solely on **selling books online** with country-wide shipping. By 2008, the company was receiving 100 orders per day. In 2010, Flipkart acquired **WeRead** from Lulu.com, a platform with 3 million readers and 60 million books, which significantly strengthened its digital book retail foundation. Flipkart gained market leadership by offering aggressive discounts and prioritizing customer service.
+### 2011–2014: Growth, Mergers, and Acquisitions
+This period marked Flipkart's diversification beyond books:
+* **Digital Content:** In 2011, Flipkart acquired digital distribution business **Mime360.com** and the digital content library of Bollywood portal **Chakpak**. This led to the launch of its DRM-free digital music store, **Flyte**, in 2012, which unfortunately shut down in June 2013 due to competition from free streaming sites.
+* **Electronics:** In 2012, Flipkart acquired online electronics retailer **Letsbuy**.
+* **Exclusive Smartphone Retailer:** In 2014, Flipkart became the exclusive Indian retailer for several popular smartphones, including the Moto G, Moto E, Xiaomi Mi 3, Redmi 1S, and Redmi Note.
+* **Fashion:** In May 2014, Flipkart acquired online fashion retailer **Myntra** for US$280 million. Myntra continues to operate as a standalone subsidiary.
+* **"Big Billion Day" Sale (2014):** Flipkart held its first major "Big Billion Day" sale on October 6, 2014, generating US$100 million in sales within 10 hours. Despite its success, the event faced criticism for technical issues and stock shortages.
+* **Mobile Payments:** In 2014, Flipkart invested in mobile payment platform **Ngpay** and merged its own payment platform, Payzippy, with Ngpay.
+* **Investment in PhonePe (2015):** Flipkart also invested in the **UPI mobile payments startup PhonePe** in 2015, although the two entities later separated into distinct companies.
+### 2015–2018: Expansion and Walmart Acquisition
+Flipkart continued its aggressive expansion, leading to a significant ownership change:
+* **Mobile Marketing:** In April 2015, Flipkart acquired **Appiterate**, a Delhi-based mobile marketing automation firm, to enhance its mobile services.
+* **"Big Billion Days" (2015):** The "Big Billion Day" sale was reprised as "Big Billion Days," a multi-day, app-exclusive event. Flipkart achieved a gross merchandise volume of US$300 million, with strong sales in fashion and mobiles.
+* **Mapping and Parenting:** In December 2015, Flipkart purchased a 34% stake in digital mapping provider **MapmyIndia**. In January 2017, Flipkart invested US$2 million in **TinyStep**, a parenting information startup.
+* **Further Fashion Acquisitions:** In 2016, Flipkart acquired online fashion retailer **Jabong.com** from Rocket Internet for US$70 million.
+* **Smartphone Market Dominance (2017):** Flipkart sold 1.3 million phones in 20 hours during its Big Billion Days promotion in 2017, and by the end of the year, held a 51% share of all Indian smartphone shipments, surpassing Amazon India.
+* **eBay Partnership (2017):** In April 2017, eBay announced it would sell its Indian subsidiary, eBay.in, to Flipkart and invest US$500 million, though these plans did not fully materialize.
+* **Snapdeal Acquisition Attempt (2017):** In July 2017, Flipkart's offer to acquire its main domestic competitor, Snapdeal, for US$700-800 million was rejected.
+* **Walmart Acquisition (2018):** In **August 2018**, American retail giant **Walmart** acquired a 77% controlling stake in Flipkart for **US$16 billion**, valuing Flipkart at approximately US$20 billion. Walmart increased its equity to 81.3% in November 2018.
+* **CEO Resignation:** On November 13, 2018, Flipkart CEO **Binny Bansal** resigned following an allegation of "serious personal misconduct," with Walmart citing "lapses in judgment" and "lack of transparency."
+### 2019–2022: Social Initiatives, Wholesale, and New Ventures
+Flipkart broadened its scope with initiatives aimed at supporting local businesses and exploring new technologies:
+* **Samarth Program (2019):** In July 2019, Flipkart launched the **Samarth program** to support local artisans, weavers, and craftspersons by helping them sell their products online nationwide, providing assistance with onboarding, cataloging, and warehousing.
+* **Customer Engagement Investment:** In November 2019, Flipkart invested US$4 million in **EasyRewardz**, a B2B loyalty management platform.
+* **Flipkart Wholesale (2020):** Flipkart launched **Flipkart Wholesale**, an online marketplace for kiranas and MSMEs, acquiring 100% stake in Walmart India's Best Price cash-and-carry business to strengthen its wholesale capabilities.
+* **Fashion and Hyperlocal Delivery:** In July 2020, Flipkart acquired a 27% stake in Arvind Fashions Limited's new subsidiary, Arvind Youth Brands (owner of Flying Machine), for US$35 million. Flipkart also rolled out **Flipkart Quick**, a 90-minute hyperlocal delivery service.
+* **Further Acquisitions (2020):** Flipkart acquired a 7.8% stake in **Aditya Birla Fashion and Retail** for US$204 million, the intellectual property of gaming startup **Mech Mocha**, and augmented reality company **Scapic**.
+* **Language Expansion:** As of 2021, the Flipkart app was available in 8 local Indian languages.
+* **Travel and Social Commerce (2021):** In April 2021, Flipkart acquired travel booking portal **Cleartrip**, later entering the hotel industry with "Flipkart Hotels" using the Cleartrip API. In July 2021, Flipkart launched **Shopsy**, a social commerce marketplace, which later entered the grocery delivery segment in 700 Indian cities by December 2021. Shopsy surpassed 200 million app downloads by July 2023.
+* **PhonePe Separation (2022):** In 2022, PhonePe moved its base to India, and Flipkart separated its ownership, leading to a cash payout of approximately $700 million to PhonePe's shareholders.
+* **Women-run Fulfilment Center and Foundation (2022):** In April 2022, Flipkart launched its first women-run grocery fulfilment center in Guwahati, Northeast India. The company also established the **Flipkart Foundation** to support entrepreneurship and skill development in underserved communities.
+* **Web3 and Metaverse (2022):** Flipkart entered the **Non-Fungible Tokens (NFTs)** and **Web3** segment, allowing Indian purchasers of Nothing Phone (1) to get Nothing's NFTs via the Nothing Community Dots app on the Polygon blockchain. In October 2022, Flipkart created a metaverse-based shopping platform called **Flipverse**, in partnership with eDAO, aiming to provide an interactive, mall-like shopping experience with avatars.
+* **Philanthropy:** The Walmart Foundation and Flipkart Foundation donated INR 2 crore for flood relief in Assam in 2022.
+### 2023–Present: New Offerings and AI Integration
+Flipkart continues to innovate and expand its services:
+* **Student's Club:** Flipkart launched a virtual storefront dedicated to academic needs called **'Flipkart Student's Club'**.
+* **Flipkart Green:** In 2023, the **'Flipkart Green'** venture was created for customers seeking certified sustainable products.
+* **Binny Bansal Divests Stake (2024):** Binny Bansal resigned from the executive team on January 28, 2024, and, along with Excel and Tiger Global Management, fully divested his stake to Walmart, with Binny earning around $1.5 billion.
+* **Flipkart UPI (2024):** In March 2024, Flipkart launched its UPI services, **Flipkart UPI**, in partnership with Axis Bank.
+* **Google Investment (2024):** In May 2024, it was reported that Google would invest US$350 million in the company.
+* **Generative AI:** Flipkart launched **Flippi**, an AI-powered shopping assistant, and **Vibes**, which integrates video content and online shopping, as part of its "Swipe Screen" experience initiative.
+* **Gen Z Focus:** In August 2023, Flipkart introduced **Spoyl**, an in-app fashion platform targeted at Gen Z, featuring a unisex product navigation system.
+* **Quick Commerce (2024):** In August 2024, Flipkart entered the quick-commerce market with **Flipkart Minutes**, offering 10-15 minute delivery in parts of Bengaluru.
+* **Credit-First UPI:** In August 2024, Flipkart-backed **super.money** launched its mobile application offering credit-first UPI services.
+* **YouTube Shopping Affiliate Program (2024):** In October 2024, Flipkart became an initial partner in YouTube's Shopping affiliate program in India, allowing creators to link Flipkart products in their content.
