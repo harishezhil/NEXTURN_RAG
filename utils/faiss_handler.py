@@ -1,3 +1,21 @@
+"""
+WHAT IS THIS FILE??
+----------
+
+FAISS-based embedding index builder and retriever — lets your LLM find the good stuff faster.
+
+Functions:
+----------
+
+- build_faiss_index(chunks):
+    Turns your document chunks into a searchable FAISS index. Think: Ctrl+F, but smarter.
+    Uses HuggingFace's MiniLM embeddings and wraps them with LangChain's FAISS.
+
+- get_top_chunks(index, chunk_texts, query, top_k=3):
+    Retrieves the top-k most relevant chunks for a query.
+    If a year like "2024" is mentioned in the query, it prioritizes results mentioning that year.
+"""
+
 import re
 from sentence_transformers import SentenceTransformer
 import faiss

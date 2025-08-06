@@ -1,8 +1,39 @@
 def cot_prompt(query, chunks):
+    """
+    WHAT DOES THIS DO??
+    -----------
+    Generates a structured prompt for a language model to perform Chain-of-Thought (CoT) reasoning 
+    based on provided document context.
+
+    Parameters:
+    ----------
+    query : str
+        The user query to be answered by the model.
+
+    chunks : list of dict
+        A list of context chunks from source documents. Each chunk should contain:
+            - 'content': list of text segments (e.g., paragraphs)
+            - 'filename' or 'metadata': optional source information
+
+    Returns:
+    -------
+    prompt : str
+        A formatted prompt containing:
+            - Context extracted from the input chunks
+            - Reasoning instructions for the model
+            - Sample Q&A examples to guide the output style
+
+    Details:
+    --------
+    - Each chunk’s content is truncated to ensure compatibility with model token limits.
+    - The prompt enforces step-by-step, transparent reasoning.
+    - Useful in Retrieval-Augmented Generation (RAG) pipelines where factual grounding is necessary.
+    """
+
+    
     context = ""
     for chunk in chunks:
         filename = chunk.get("filename", chunk.get("metadata", {}).get("filename", "Unknown"))
-        #content = chunk.get("content", "")
         content = "\n\n".join(chunk["content"][:1000] for chunk in chunks)
         context += f"\n\nFrom {filename}:\n{content}"
 

@@ -1,3 +1,26 @@
+"""
+WHY evaluation.py?
+----------
+
+Evaluation utilities for comparing LLM-generated answers to ground truth — 
+to know if the AI is just confidently wrong.
+
+Includes:
+---------
+- ROUGE-1 and ROUGE-L: Because word overlap still tells us something.
+- Cosine Similarity: Checks if two answers "feel" the same in embedding space.
+- Token-level F1: Measures how much your prediction and truth actually agree, word for word.
+- Accuracy: If token-F1 ≥ 0.6, we pretend it's correct. Can be adjusted.
+
+Functions:
+----------
+- tokenize(text): Turns a sentence into a set of lowercase word tokens. Punctuation? Gone.
+- compute_token_f1(ref, pred): Computes precision, recall, and F1 score between token sets.
+- evaluate_predictions(ground_truth, predictions):
+    Takes two dicts (question → answer), compares each pair, and returns a metrics summary.
+"""
+
+
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.metrics import accuracy_score, f1_score
 from sentence_transformers import SentenceTransformer
@@ -55,12 +78,6 @@ def evaluate_predictions(ground_truth: dict, predictions: dict):
         if token_f1 >= 0.6:
             correct_count += 1
             
-    
-        # # Optional strict classification metrics
-        # y_true = list(ground_truth.values())
-        # y_pred = [predictions[q] for q in ground_truth]
-        # strict_accuracy = accuracy_score(y_true, y_pred)
-        # strict_f1 = f1_score(y_true, y_pred, average='macro', zero_division=0)
 
     total = len(ground_truth)
     accuracy = correct_count / total if total > 0 else 0

@@ -1,3 +1,33 @@
+"""
+Streamlit Application: RAG-Based Question Answering System
+
+Purpose:
+--------
+A RAG (Retrieval-Augmented Generation) app that lets users upload documents, ask questions,
+and get context-aware answers.
+
+Main Features:
+--------------
+- Upload up to 10 files (.pdf, .txt, .json, .xml, .xlsx)
+- Handles file parsing, chunking, vector indexing, and retrieval
+- Uses Groq’s LLM to generate answers with Chain-of-Thought prompting
+- Detects filename-specific questions like “what does revenue.xlsx say?”
+- Built-in evaluation module with ROUGE, cosine similarity, F1, and accuracy scoring
+
+Bonus Perks:
+------------
+- Evaluation metrics explained (because it had to be done)
+- Real-time scoring for model answers based on ground truth
+
+Usage:
+------
+1. Upload documents
+2. Type your question
+3. Get a smart, sourced answer
+4. (Optional) Run evaluation to see how well your RAG pipeline performs
+"""
+
+
 import streamlit as st
 from utils.file_loader import load_files
 from utils.chunker import chunk_sections
@@ -9,7 +39,7 @@ import pandas as pd
 import re
 
 
-st.set_page_config(page_title="RAG App with Groq", layout="wide")
+st.set_page_config(page_title="RAG App", layout="wide")
 
 st.markdown("""
     <style>
@@ -105,7 +135,7 @@ if uploaded_files and query:
             st.markdown("### 💬 Answer")
             st.write(answer)
 
-            # ✅ Show retrieved chunk sources before generating answer
+            #  Show retrieved chunk sources before generating answer
             st.markdown("### 📄 Top Chunks Used")
             for idx, chunk in enumerate(relevant_chunks, 1):
                     filename = chunk.get("metadata", {}).get("filename", "Unknown")

@@ -1,4 +1,35 @@
-import fitz  # PyMuPDF
+"""
+HOW TO LOAD FILES?
+-----------------
+
+load_files(files):
+    Reads a list of uploaded files (PDFs, TXTs, JSONs, XMLs, and Excel spreadsheets),
+    and extracts their content into a unified list of dictionaries — because every file
+    wants to be understood.
+
+    Supports:
+    ---------
+    - .pdf: Extracts text from each page using PyMuPDF
+    - .txt: Reads plain text like a diary entry
+    - .json: Converts to a JSON string (we don't judge)
+    - .xml: Parses using ElementTree (XML is weird, we know)
+    - .xlsx: Flattens each row into readable key-value lines
+
+    Returns:
+    --------
+    List[dict]: Each dict contains:
+        - 'filename': Original file name
+        - 'content' : Extracted or parsed text (or error message)
+
+    Notes:
+    ------
+    - Handles encoding errors gracefully.
+    - Error messages are preserved in content for transparency.
+    - Great for feeding a RAG pipeline or an LLM that loves reading random files.
+"""
+
+
+import fitz  
 import pandas as pd
 import json
 import xml.etree.ElementTree as ET

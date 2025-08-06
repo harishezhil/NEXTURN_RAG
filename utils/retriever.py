@@ -1,3 +1,22 @@
+"""
+THE CALLING CARD for the Groq API wrapper.
+------------------------------------------
+Groq API wrapper — talk to your favorite LLM like a pro.
+
+What it does:
+-------------
+- Loads your `GROQ_API_KEY` securely from environment variables (didn’t hardcode it).
+- Uses the Groq Chat Completion endpoint to send a prompt and get a smart response.
+- Handles JSON decoding and prints useful debug info when the API goes weird.
+
+Functions:
+----------
+- generate_response(prompt: str) -> str:
+    Sends a user prompt to the Groq API using gemma2-9b-it.
+    Returns the model's response text, or an error string if things break.
+"""
+
+
 import os
 import requests
 from dotenv import load_dotenv

@@ -1,3 +1,19 @@
+"""
+WHAT'S THIS FILE FOR?
+-------------------
+
+chunk_sections(documents):
+    Breaks documents into readable chunks based on headings, numbered lists, or section markers.
+    Works with both raw strings and dictionaries (because sometimes data is messy).
+
+    - Uses regex magic to split on newlines before headers like '#', '1. ', or 'Section 3'.
+    - Strips whitespace.
+    - Keeps track of where each chunk came from (filename included).
+
+    Returns a list of tidy content chunks, each wrapped with filename info for future detective work.
+"""
+
+
 import re
 
 def chunk_sections(documents):
@@ -11,9 +27,6 @@ def chunk_sections(documents):
         else:
             content = doc
             filename = "Unknown"
-
-        # Split content into sections using double newlines or other markers
-        # split_sections = re.split(r'\n\s*\n+', content)
 
         split_sections = re.split(r'\n(?=(?:#{1,6} |\d+\.\s+|Section\s+\d+))', content)
 
