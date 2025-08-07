@@ -60,6 +60,6 @@ def get_top_chunks(index, chunk_texts, query, top_k=3):
 
     return [{
         "content": doc.page_content,
-        "filename": doc.metadata.get("filename", "Unknown")
+        "metadata": doc.metadata
     } for doc in top_docs]
 
