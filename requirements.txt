@@ -10,3 +10,4 @@ python-dotenv
 requests
 langchain
 langchain-community
+openpyxl
