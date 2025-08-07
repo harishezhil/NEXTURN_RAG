@@ -28,7 +28,7 @@ from langchain.schema import Document
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 def build_faiss_index(chunks):
-    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", model_kwargs={"device": "cpu"})
 
     documents = []
     for chunk in chunks:
