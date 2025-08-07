@@ -52,7 +52,8 @@ def load_files(files):
                 text = f"[Error reading PDF: {str(e)}]"
             all_texts.append({
                 "filename": filename,
-                "content": text
+                "content": text,
+                "type": "pdf"
             })
 
 
@@ -60,44 +61,79 @@ def load_files(files):
             content = file.read().decode()
             all_texts.append({
                 "filename": filename,
-                "content": content
+                "content": content,
+                "type": "txt"
             })
-
+        
         elif filename.endswith(".json"):
-            data = json.load(file)
-            content = json.dumps(data)
-            all_texts.append({
-                "filename": filename,
-                "content": content
-            })
+            try:
+                data = json.load(file)
+                if isinstance(data, list):
+                    for item in data:
+                        chunk = json.dumps(item, indent=2)
+                        all_texts.append({
+                            "filename": filename,
+                            "content": chunk,
+                            "type": "json"
+                        })
+                elif isinstance(data, dict):
+                    for key, value in data.items():
+                        chunk = json.dumps({key: value}, indent=2)
+                        all_texts.append({
+                            "filename": filename,
+                            "content": chunk,
+                            "type": "json"
+                        })
+                else:
+                    content = json.dumps(data, indent=2)
+                    all_texts.append({
+                        "filename": filename,
+                        "content": content,
+                        "type": "json"
+                    })
+            except Exception as e:
+                all_texts.append({
+                    "filename": filename,
+                    "content": f"[Error parsing JSON: {str(e)}]",
+                    "type": "json"
+                })
 
         elif filename.endswith(".xml"):
-            xml_bytes = file.read()
             try:
+                xml_bytes = file.read()
                 tree = ET.parse(io.BytesIO(xml_bytes))
                 root = tree.getroot()
-                content = ET.tostring(root, encoding='unicode')
+                for child in root:
+                    content = ET.tostring(child, encoding='unicode')
+                    all_texts.append({
+                        "filename": filename,
+                        "content": content,
+                        "type": "xml"
+                    })
             except Exception as e:
-                content = f"[Failed to parse XML file: {filename}] Error: {str(e)}"
-            all_texts.append({
-                "filename": filename,
-                "content": content
-            })
+                all_texts.append({
+                    "filename": filename,
+                    "content": f"[Error parsing XML: {str(e)}]",
+                    "type": "xml"
+                })
 
         elif filename.endswith(".xlsx"):
             try:
                 file.seek(0)
                 df = pd.read_excel(file, engine='openpyxl')
-                row_texts = []
                 for _, row in df.iterrows():
                     row_text = "\n".join([f"{col.strip()}: {str(row[col]).strip()}" for col in df.columns])
-                    row_texts.append(row_text)
-                content = "\n\n".join(row_texts)
+                    all_texts.append({
+                        "filename": filename,
+                        "content": row_text,
+                        "type": "xlsx"
+                    })
             except Exception as e:
-                content = f"[Failed to parse Excel file: {filename}] Error: {str(e)}"
-            all_texts.append({
-                "filename": filename,
-                "content": content
-            })
+                all_texts.append({
+                    "filename": filename,
+                    "content": f"[Failed to parse Excel file: {filename}] Error: {str(e)}",
+                    "type": "xlsx"
+                })
+
 
     return all_texts

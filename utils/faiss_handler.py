@@ -28,7 +28,7 @@ from langchain.schema import Document
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 def build_faiss_index(chunks):
-    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", model_kwargs={"device": "cpu"})
 
     documents = []
     for chunk in chunks:
@@ -44,7 +44,7 @@ def build_faiss_index(chunks):
 
 
 
-def get_top_chunks(index, chunk_texts, query, top_k=3):
+def get_top_chunks(index, chunk_texts, query, top_k=5):
     results = index.similarity_search(query, k=3) 
     year_match = re.search(r"\b(20\d{2})\b", query)
 
@@ -60,6 +60,6 @@ def get_top_chunks(index, chunk_texts, query, top_k=3):
 
     return [{
         "content": doc.page_content,
-        "metadata": doc.metadata
+        "filename": doc.metadata.get("filename", "Unknown")
     } for doc in top_docs]
 

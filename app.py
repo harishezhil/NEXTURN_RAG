@@ -113,20 +113,19 @@ if uploaded_files and query:
 
         else:
             # STEP 3: Chunking logic
-            if any(
-                isinstance(doc, dict) and
-                isinstance(doc.get("content", ""), str) and
-                "Year:" in doc["content"] and "Revenue:" in doc["content"]
-                for doc in documents
-            ):
-                chunks = documents  
+            # Determine whether to apply regex chunking (for .txt and .pdf only)
+            structured_types = {"json", "xml", "xlsx"}
+            if any(doc.get("type") in structured_types for doc in documents):
+                chunks = documents 
             else:
                 chunks = chunk_sections(documents)
+
+            
             # STEP 4: Build FAISS index
             index, chunk_texts = build_faiss_index(chunks)
 
             # STEP 5: Retrieve top chunks
-            relevant_chunks = get_top_chunks(index, chunk_texts, query, top_k=5)
+            relevant_chunks = get_top_chunks(index, chunk_texts, query, top_k=10)
 
             # STEP 6: Generate prompt with Chain-of-Thought
             final_prompt = cot_prompt(query, relevant_chunks)
@@ -138,7 +137,7 @@ if uploaded_files and query:
             #  Show retrieved chunk sources before generating answer
             st.markdown("### 📄 Top Chunks Used")
             for idx, chunk in enumerate(relevant_chunks, 1):
-                    filename = chunk.get("metadata", {}).get("filename", "Unknown")
+                    filename = chunk.get("filename", "Unknown")
                     st.markdown(f"**Chunk {idx}: {filename}**")
                     st.code(chunk.get("content", "")[:1000])
 
